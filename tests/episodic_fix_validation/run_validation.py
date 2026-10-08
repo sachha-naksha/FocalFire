@@ -56,8 +56,8 @@ from slim_loader import load_slim
 #                                                                                  #
 #   * The LATENT FACTOR is now established, not guessed -- see DEFAULT_LF_FILES.    #
 #   * The trajectory ranges and episode geometry remain a reconstruction:           #
-#       PB = (1, 2), GC = (1, 3) follow the "day-1 start" convention the episodic   #
-#       notebooks use (Fig3_1 / Fig4_1 both run episodic work on (1, 3));           #
+#       PB = (0, 2), GC = (0, 3) are the post-bifurcation branches (node 0 is the   #
+#       bifurcation, node 1 the root; the entire range (1, x) takes 40 points);     #
 #       num_points=20 with points_per_episode=5 gives exactly the 4 episodes on     #
 #       disk, with the q = 5 used everywhere else in the codebase.                  #
 #                                                                                  #
@@ -86,7 +86,7 @@ DEFAULT_LF_FILES = ",".join(
     ]
 )
 
-BRANCHES = {"pb": (1, 2), "gc": (1, 3)}
+BRANCHES = {"pb": (0, 2), "gc": (0, 3)}
 
 
 def load_lf_genes(paths: str) -> list[str]:

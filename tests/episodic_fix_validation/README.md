@@ -117,8 +117,9 @@ legacy-vs-fixed verdict still stands.
 
 ### Still reconstructed
 
-- `PB = (1, 2)`, `GC = (1, 3)` — the "day-1 start" convention the episodic notebooks use
-  (`Fig3_1` and `Fig4_1` both run episodic work on `(1, 3)`);
+- `PB = (0, 2)`, `GC = (0, 3)` — the post-bifurcation branches (node 0 is the
+  bifurcation, node 1 the root; a single branch is sampled at 20 points, the entire
+  range `(1, x)` at 40);
 - `num_points=20`, `points_per_episode=5` → exactly the 4 episodes on disk, with the
   `q = 5` used everywhere else in the codebase;
 - `percentile=98`, `pval_threshold=1e-3`.
